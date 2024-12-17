@@ -90,7 +90,17 @@ const thesaurus = {
   xi: 'letter',
   ye: 'you',
   yo: 'greeting',
-  za: 'pizza'
+  za: 'pizza',
+  cat: 'feline',
+  dog: 'canine',
+  sun: 'star',
+  moon: 'satellite',
+  sky: 'heavens',
+  sea: 'ocean',
+  car: 'vehicle',
+  bus: 'transport',
+  run: 'sprint',
+  fly: 'soar'
 };
 
 export default thesaurus;

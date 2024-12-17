@@ -21,8 +21,8 @@ function Thesaurus() {
         type="text"
         value={inputValue}
         onChange={handleInputChange}
-        maxLength="2"
-        placeholder="Enter a two-letter word"
+        maxLength="3"
+        placeholder="Enter a two or three-letter word"
       />
       <button onClick={handleButtonClick}>Get Suggestion</button>
       <p>Suggestion: {suggestion}</p>

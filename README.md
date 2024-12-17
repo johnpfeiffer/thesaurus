@@ -2,7 +2,7 @@
 
 ## Description
 
-This is a basic React application for a tiny thesaurus that can only provide one suggestion for any two-letter words. The application allows users to input a two-letter word and get a suggestion for it.
+This is a basic React application for a tiny thesaurus that can provide one suggestion for any two-letter or three-letter words. The application allows users to input a two-letter or three-letter word and get a suggestion for it.
 
 ## How to Run the Project
 
