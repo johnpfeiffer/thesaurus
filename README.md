@@ -16,6 +16,7 @@ a tiny thesaurus for any two-letter or three-letter words
    ```
 3. Install the dependencies:
    ```
+   go mod tidy
    ```
 4. Start the development server:
    ```
