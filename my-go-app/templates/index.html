@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Input</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Enter a Word</h1>
+        <form action="/" method="post">
+            <input type="text" name="word" autofocus>
+            <button type="submit">Submit</button>
+        </form>
+        {{if .Word}}
+        <div class="result">
+            <h2>You entered:</h2>
+            <p>{{.Word}}</p>
+            {{if .HasSynonym}}
+            <h3>Synonym found:</h3>
+            <p>{{.Synonym}}</p>
+            {{end}}
+        </div>
+        {{end}}
+    </div>
+</body>
+</html>
