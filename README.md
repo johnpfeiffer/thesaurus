@@ -12,7 +12,7 @@ a tiny thesaurus for any two-letter or three-letter words
    ```
 2. Navigate to the project directory:
    ```
-   cd thesaurus
+   cd thesaurus/my-go-app
    ```
 3. Install the dependencies:
    ```
