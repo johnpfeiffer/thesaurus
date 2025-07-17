@@ -23,7 +23,7 @@ jobs:
         uses: google-github-actions/deploy-appengine@v2
         with:
           project_id: ${{ secrets.GAEPROJECTID }}
-          config-file: my-go-app/app.yaml
+          working_directory: my-go-app
 
       - name: Display version URL
         run: 'curl "${{ steps.deploy-step.outputs.version_url }}"'
