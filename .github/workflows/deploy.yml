@@ -22,9 +22,8 @@ jobs:
         id: deploy-step
         uses: google-github-actions/deploy-appengine@v2
         with:
-          credentials_json: ${{ secrets.GAECREDENTIALS }}
           project_id: ${{ secrets.GAEPROJECTID }}
-          config-file: app.yaml
+          config-file: my-go-app/app.yaml
 
       - name: Display version URL
         run: 'curl "${{ steps.deploy-step.outputs.version_url }}"'
