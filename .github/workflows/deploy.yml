@@ -16,7 +16,7 @@ jobs:
       - name: Authenticate to Google Cloud
         uses: google-github-actions/auth@v2
         with:
-          credentials_json: ${{ secrets.secrets.GAECREDENTIALS }}
+          credentials_json: ${{ secrets.GAECREDENTIALS }}
 
       - name: Deploy to Google App Engine
         id: deploy-step
