@@ -11,11 +11,20 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
+
+      - name: Authenticate to Google Cloud
+        uses: google-github-actions/auth@v2
+        with:
+          credentials_json: ${{ secrets.secrets.GAECREDENTIALS }}
 
       - name: Deploy to Google App Engine
+      - id: deploy-step
         uses: google-github-actions/deploy-appengine@v2
         with:
           credentials_json: ${{ secrets.GAECREDENTIALS }}
           project_id: ${{ secrets.GAEPROJECTID }}
           config-file: app.yaml
+
+      - name: Display version URL
+        run: 'curl "${{ steps.deploy-step.outputs.version_url }}"'
