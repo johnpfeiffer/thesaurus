@@ -29,3 +29,4 @@ a tiny thesaurus for any two-letter or three-letter words
 triggered on every push to main
 CI/CD using github actions to google app engine
 
+(see the blog post for the very painful process to get permissions setup)
