@@ -19,7 +19,7 @@ jobs:
           credentials_json: ${{ secrets.secrets.GAECREDENTIALS }}
 
       - name: Deploy to Google App Engine
-      - id: deploy-step
+        id: deploy-step
         uses: google-github-actions/deploy-appengine@v2
         with:
           credentials_json: ${{ secrets.GAECREDENTIALS }}
