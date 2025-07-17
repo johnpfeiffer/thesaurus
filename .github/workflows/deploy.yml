@@ -16,6 +16,6 @@ jobs:
       - name: Deploy to Google App Engine
         uses: google-github-actions/deploy-appengine@v2
         with:
-	  project_id: ${{ secrets.GAEPROJECTID }}
           credentials_json: ${{ secrets.GAECREDENTIALS }}
+          project_id: ${{ secrets.GAEPROJECTID }}
           config-file: app.yaml
