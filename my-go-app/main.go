@@ -5,10 +5,13 @@ import (
 	"log"
 	"net/http"
 	"os"
+	"my-go-app/words"
 )
 
 type PageData struct {
-	Word string
+	Word     string
+	Synonym  string
+	HasSynonym bool
 }
 
 func main() {
@@ -41,7 +44,12 @@ func indexHandler(w http.ResponseWriter, r *http.Request) {
 
 	data := PageData{}
 	if r.Method == http.MethodPost {
-		data.Word = r.FormValue("word")
+		word := r.FormValue("word")
+		data.Word = word
+		if synonym, ok := words.IsSynonymOfTwoLetterWord(word); ok {
+			data.Synonym = synonym
+			data.HasSynonym = true
+		}
 	}
 
 	err = tmpl.Execute(w, data)

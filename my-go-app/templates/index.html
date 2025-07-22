@@ -17,6 +17,10 @@
         <div class="result">
             <h2>You entered:</h2>
             <p>{{.Word}}</p>
+            {{if .HasSynonym}}
+            <h3>Synonym found:</h3>
+            <p>{{.Synonym}}</p>
+            {{end}}
         </div>
         {{end}}
     </div>
