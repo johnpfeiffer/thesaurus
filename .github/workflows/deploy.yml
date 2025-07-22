@@ -6,8 +6,25 @@ on:
       - main
 
 jobs:
+  test:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: '1.24'
+
+      - name: Run tests
+        run: go test ./...
+        working-directory: my-go-app
+
   deploy:
     runs-on: ubuntu-latest
+    needs: test
 
     steps:
       - name: Checkout code
