@@ -5,7 +5,7 @@ import (
 	"log"
 	"net/http"
 	"os"
-	"my-go-app/words"
+	"github.com/johnpfeiffer/thesaurus/my-go-app/words"
 )
 
 type PageData struct {
