@@ -1,21 +1,22 @@
 package main
 
 import (
+	"github.com/johnpfeiffer/thesaurus/my-go-app/words"
 	"html/template"
 	"log"
 	"net/http"
 	"os"
-	"github.com/johnpfeiffer/thesaurus/my-go-app/words"
 )
 
 type PageData struct {
-	Word     string
-	Synonym  string
+	Word       string
+	Synonym    string
 	HasSynonym bool
 }
 
 func main() {
 	http.HandleFunc("/", indexHandler)
+	http.HandleFunc("/md", mdHandler)
 	http.Handle("/static/", http.StripPrefix("/static/", http.FileServer(http.Dir("static"))))
 
 	port := os.Getenv("PORT")
